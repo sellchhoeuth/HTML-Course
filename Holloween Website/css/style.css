@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@300&family=Titillium+Web:wght@600&display=swap');
+*{
+    padding: 0; 
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    transition: .5s ease;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    font-size: 88.5%;
+}
+.bg-color{
+    background: #000;
+}
+/* ........header.......... */
+.header{
+    height: 6rem;
+    padding: 1rem 4rem;
+    background: #fff;
+}
+.header,.header .logo, .header .navbars, .header .navbars ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo h2 em{
+    color: #1dd5ee;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.header .logo img{
+    width: 5rem;
+    height: 5rem;
+    margin:0 1rem;
+}
+.header .navbars ul{
+    margin-right: 5rem;
+}
+.header .navbars ul li{
+    margin: .5rem;
+}
+.header .navbars ul li:hover, .container-boxes .box .flag-item img:hover{
+    transform: scale(1.1);
+}
+.header .navbars ul li a{
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+}
+.header .navbars ul li a:hover,#active{
+    background: #1d21ee;
+    color: #fff;
+}
+.header, .header .navbars ul li a:hover , #active{
+    box-shadow: 2px 4px 6px 1px #aaa;
+}
+.header .navbars .icons{
+    color: #000;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.header .navbars .icons:hover{
+    color: #1d21ee
+}
+.title{
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    text-shadow: 2px 3px 5px #fff;
+    margin-top: 4rem;
+}
+.title span , .content-col .row-12 .description h1 span{
+    color: #ff7200;
+    font-family: 'Lobster', cursive;
+}
+.title-color{
+    text-shadow: 2px 3px 5px #aaa;
+}
+/* container box */
+.container-fluid{
+    background-image:  url(../image/david-menidrey-MYRG0ptGh50-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 4rem 0;
+}
+/* ..........container-boxes........... */
+.container-boxes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem 2rem;
+    width: 80%;
+    margin: 2rem auto;
+}
+.container-boxes .box{
+    padding: 2rem 1rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #fff;
+    background: #1e1e1e88;
+}
+.container-boxes .box:hover, .content-col .row-12:hover{
+    box-shadow: 2px 4px 6px 1px #fff;
+}
+.container-boxes .box .flag-item img{
+    width: 10rem;
+    height: 6rem;
+}
+.container-boxes .box  .org-name h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: .6rem 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+.container-boxes .box .content-name p{
+    font-size: 1.4rem;
+}
+.container-boxes .box .content-name p span{
+    margin-left: 4rem;
+}
+.container-boxes .box .point{
+    font-size: 5rem;
+    margin: 2rem 0;
+    font-weight: 900;
+}
+/* <!-- content challenges --> */
+.content-col{
+    width: 80%;
+    margin:2rem auto;
+}
+.content-col .row-12{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    border: #fff solid 1px;
+    margin-top: 2rem;
+    padding: 1rem; 
+    background: #1e1e1ee0;
+}
+.content-col .row-12 .icons {
+    width: 14%;
+    text-align: center;
+}
+.content-col .row-12 .description {
+    width: 60%;
+}
+.content-col .row-12 .description p{
+    font-size: 1.3rem;
+    margin: .6rem 0 
+}
+.content-col .row-12 .description .time{
+    margin: 1rem 0 2rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.content-col .row-12 .description .time span{
+    margin-left: 2rem;
+}
+.content-col .row-12 .button{
+    margin-left: 10rem;
+    width: 20%;
+    text-align: right;
+}
+.content-col .row-12 .button .btn{
+    padding: .3rem 2rem;
+    font-size: 1.6rem;
+    background: #ff7200;
+    color: #fff;
+    border-radius: .4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600
+}
+.content-col .row-12 .button .btn:hover{
+    box-shadow: 2px 3px 6px 1px #fff;
+    background: #e77416;
+}
+
+
+@media (max-width: 1240px) {
+    html{
+        font-size: 75.5%;
+    }
+    .container-boxes{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 840px) {
+    html{
+        font-size: 65.5%;
+    }
+    .container-boxes{
+        grid-template-columns: 1fr;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+}
